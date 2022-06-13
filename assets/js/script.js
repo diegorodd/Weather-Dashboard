@@ -7,17 +7,17 @@ function Info() { // new name is for the user to put whichever city they want
     fetch("https://api.openweathermap.org/data/2.5/forecast?q="+newName.value+"&appid=03e4117d4ffcfe106f7d287a2cdf04a1").then(Response => Response.json()).then(data => {
         console.log(data);
         // the for loop
-        for (i = 0; i < 5; i ++) {
+        for (i = 0; i < 5; i++) {
             document.getElementById("day" + (
                 i + 1
-            ) + "Min").innerHTML = "Min:" + Number(data.list[i].main.temp_min - 300.24).toFixed(1) + "";
+            ) + "Min").innerHTML = "Min:" + Number(data.list[i].main.temp_min - 300.24).toFixed(1) + "°";
         }
-        for (i = 0; i < 5; i ++) {
+        for (i = 0; i < 5; i++) {
             document.getElementById("day" + (
                 i + 1
-            ) + "Mix").innerHTML = "Max:" + Number(data.list[i].main.temp_max - 300.24).toFixed(1) + "";
+            ) + "Max").innerHTML = "Max:" + Number(data.list[i].main.temp_max - 300.24).toFixed(1) + "°";
         }
-        for (i = 0; i < 5; i ++) {
+        for (i = 0; i < 5; i++) {
             document.getElementById("img" + (
                 i + 1
             )).src = " http://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + "png"
@@ -28,15 +28,16 @@ function Info() { // new name is for the user to put whichever city they want
 const d = new Date();
 const weekday = ["Monday", "Tuesday", "Wednesday", "Thursday"];
 
-function CheckDay(day) {
+function checkDay(day) {
     if (day + d.getDay() > 6) {
         return day + d.getDay() - 7;
     } else {
         return day + d.getDay();
     }
 }
-for (i = 0; i < 5; i ++) {
+for (i = 0; i < 5; i++) {
     document.getElementById("day" + (
-        i + 1
-    )).innerHTML = weekday[CheckDay(i)];
+
+       i + 1
+    )).innerHTML = weekday[checkDay(i)];
 }

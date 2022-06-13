@@ -5,25 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <h1 id="Para1"> Weather Forecast</h1>
     <p id="inputContainer">City: <input type="text" id="cityInput"></p>
-    <button> Click here</button>
+    <button onclick="info()"> Click here</button>
     <h2 id="cityName">Winston Salem</h2>
 
     <div id="weatherContainer">
         <div id="iconContainer">
             <div class="icons">
                 <p class="weather" id="day1"></p>
-                <div class="image"></div>
+                <div class="image"><img src="dots.png" class="imgClass" id="img1" alt=""></div>
+                <p class="minValues" id="day1min">Loading.. </p>
+                <p class="maxValues" id="day1max">Loading.. </p>
+            </div>
+            <div class="icons">
+                <p class="weather" id="day2"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img2" alt=""></div>
+                <p class="minValues" id="day2min">Loading.. </p>
+                <p class="maxValues" id="day2max">Loading.. </p>
+            </div>
+            <div class="icons">
+                <p class="weather" id="day3"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img3" alt=""></div>
+                <p class="minValues" id="day3min">Loading.. </p>
+                <p class="maxValues" id="day3max">Loading.. </p>
+            </div>
+            <div class="icons">
+                <p class="weather" id="day4"></p>
+                <div class="image"><img src="dots.png" class="imgClass" id="img4" alt=""></div>
+                <p class="minValues" id="day4min">Loading.. </p>
+                <p class="maxValues" id="day4max">Loading.. </p>
             </div>
         </div>
     </div>
 
 
 
-<script src="script.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>

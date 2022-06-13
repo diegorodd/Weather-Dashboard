@@ -6,6 +6,7 @@ function Info() { // new name is for the user to put whichever city they want
     // make the fetch get any city its searched for
     fetch("https://api.openweathermap.org/data/2.5/forecast?q="+newName.value+"&appid=03e4117d4ffcfe106f7d287a2cdf04a1").then(Response => Response.json()).then(data => {
         console.log(data);
+        // the for loop
         for (i = 0; i < 5; i ++) {
             document.getElementById("day" + (
                 i + 1
@@ -37,5 +38,5 @@ function CheckDay(day) {
 for (i = 0; i < 5; i ++) {
     document.getElementById("day" + (
         i + 1
-    )).innerHTML = weekday[Checkday(i)];
+    )).innerHTML = weekday[CheckDay(i)];
 }

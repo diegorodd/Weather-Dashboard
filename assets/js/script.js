@@ -1,6 +1,7 @@
 function Info() { // new name is for the user to put whichever city they want
     const newName = document.getElementById("cityInput");
     const cityName = document.getElementById("cityName");
+    
     cityName.innerHTML = "--" + newName.value + "--"
 
     // make the fetch get any city its searched for
